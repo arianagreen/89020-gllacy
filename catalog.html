@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог Глейси</title>
+  </head>
+  <body>
+
+    <header class="main-header">
+
+      <nav class="main-nav">
+
+        <a class="main-header-logo" href="index.html">
+          <img src="img/logo.svg" alt="Логотип магазина мороженного Gllacy" width="154" height="64">
+        </a>
+
+        <ul class="site-nav">
+          <li>
+            <a href="catalog.html">Каталог</a>
+            <ul class="catalog-inner-nav">
+              <li><a href="#">Новинки</a></li>
+              <li><a href="#">Сливочное</a></li>
+              <li><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лед</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О компании</a></li>
+        </ul>
+
+        <div class="search">
+          <a href="#">Поиск</a>
+          <!-- Здесь будет форма поиска -->
+        </div>
+
+        <ul class="user-nav">
+          <li class="login-link">
+            <a href="#">Вход</a>
+            <!-- Здесь будет форма входа -->
+          </li>
+        </ul>
+
+        <div class="header-cart">
+          <a href="#" class="header-state">Пусто</a>
+          <div class="cart-preview">
+            <table>
+              <tr class="cart-item">
+                <td><span class="delete-item">X</span></td>
+                <td><img src="" alt=""></td>
+                <td>Пломбир с апельсиновым джемом</td>
+                <td><span class="weight">1,5 кг</span> х <span class="price-per-kg">200 руб.</span></td>
+                <td class="summ">300 руб</td>
+              </tr>
+              <tr class="cart-item">
+                <td><span class="delete-item">X</span></td>
+                <td><img src="" alt=""></td>
+                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                <td><span class="weight">1,5 кг</span> х <span class="price-per-kg">300 руб.</span></td>
+                <td class="summ">450 руб.</td>
+              </tr>
+            </table>
+            <p>Итого: 750 руб.</p>
+            <a href="#" class="checkout">Оформить заказ</a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="contacts">
+          <p class="work-time">С 10 до 20, ежедневно</p>
+          <a href="tel:+78124502525">8 812 450 25 25</a>
+      </section>
+    </header>
+
+    <main class="container">
+
+      <div class="breadcrumbs">
+        <h2 class="visually-hidden">Навигация</h2>
+        <ul>
+          <li><a href="index.html" class="breadcrumb-item">Главная</a></li>
+          <li><a href="catalog.html" class="breadcrumb-item">Каталог</a></li>
+          <li><a class="breadcrumb-item">Сливочное</a></li>
+        </ul>
+      </div>
+
+      <h1>Сливочное мороженое</h1>
+
+      <section class="catalog-filter">
+        <form action="url">
+          <!-- Немного повспоминала инпуты... Хотя скорее всего придется всё переписывать -->
+          <ul class="filter-items">
+            <li class="filter-item">
+              <label>
+                Сортировка
+                <select class="" name="sort-by">
+                  <option value="по популярности">по популярности</option>
+                  <option value="по цене">по цене</option>
+                </select>
+              </label>
+            </li>
+            <li class="filter-item">
+              <label>
+                Цена 100 руб. - 500 руб.
+                <!-- <input type="range" min="100" max="500" step="5" multiple>  -->
+              </label>
+            </li>
+            <li class="filter-item">
+              <label>
+                Жирность
+                <input type="radio" name="fat" value="0">0%</input>
+                <input type="radio" name="fat" value="<10">до 10%</input>
+                <input type="radio" name="fat" value="<30">до 30%</input>
+                <input type="radio" name="fat" value=">30">выше 30%</input>
+              </label>
+            </li>
+            <li class="filter-item">
+              <label>
+                Наполнители:
+                <input type="checkbox" name="filler" value="chocolate" checked>шоколадные</input>
+                <input type="checkbox" name="filler" value="shugar" checked>сахарные посыпки</input>
+                <input type="checkbox" name="filler" value="fruit">фрукты</input>
+                <input type="checkbox" name="filler" value="syrup">сиропы</input>
+                <input type="checkbox" name="filler" value="jam">джемы</input>
+              </label>
+            </li>
+          </ul>
+          <input type="submit" name="" value="Применить">
+        </form>
+
+      </section>
+
+      <section class="catalog-items">
+        <ul class="icecream-list">
+          <li class="icecream-item">
+            <img src="img" alt="С апельсиновым джемом и цитрусовой стружкой">
+            <p class="price">310 &#8381; <span>/кг</span></p>
+            <a class="icecream-name" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a class="button" href="#">Быстрый просмотр</a>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+
+    <footer class="main-footer">
+      <div class="footer-social">
+        <ul>
+          <li><a href="#" class="social-button">Твиттер</a></li>
+          <li><a href="#" class="social-button">Инстаграм</a></li>
+          <li><a href="#" class="social-button">Фейсбук</a></li>
+          <li><a href="#" class="social-button">Вконтакте</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-info">
+        <ul>
+          <li><a href="" class="info-item">Для поставщиков</a></li>
+          <li><a href="" class="info-item">О производстве</a></li>
+          <li><a href="" class="info-item">Наши документы</a></li>
+          <li><a href="" class="info-item">Экологические стандарты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-copyright">
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" alt="HTML Academy Logo"></a>
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy &copy; 2017</a></p>
+      </div>
+    </footer>
+
+  </body>
+</html>
