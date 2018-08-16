@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Каталог Глейси</title>
@@ -42,19 +42,19 @@
         </ul>
 
         <div class="header-cart">
-          <a href="#" class="header-state">Пусто</a>
+          <a href="#" class="cart-state">Пусто</a>
           <div class="cart-preview">
             <table>
               <tr class="cart-item">
-                <td><span class="delete-item">X</span></td>
-                <td><img src="" alt=""></td>
+                <td><a href="#" class="delete-item">X</a></td>
+                <td><img src="" alt="Пломбир с апельсиновым джемом"></td>
                 <td>Пломбир с апельсиновым джемом</td>
                 <td><span class="weight">1,5 кг</span> х <span class="price-per-kg">200 руб.</span></td>
                 <td class="summ">300 руб</td>
               </tr>
               <tr class="cart-item">
-                <td><span class="delete-item">X</span></td>
-                <td><img src="" alt=""></td>
+                <td><a href="#" class="delete-item">X</a></td>
+                <td><img src="" alt="Клубничный пломбир"></td>
                 <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                 <td><span class="weight">1,5 кг</span> х <span class="price-per-kg">300 руб.</span></td>
                 <td class="summ">450 руб.</td>
@@ -66,10 +66,10 @@
         </div>
       </nav>
 
-      <section class="contacts">
+      <div class="contacts">
           <p class="work-time">С 10 до 20, ежедневно</p>
-          <a href="tel:+78124502525">8 812 450 25 25</a>
-      </section>
+          <a href="tel:88124502525">8 812 450 25 25</a>
+      </div>
     </header>
 
     <main class="container">
@@ -86,50 +86,47 @@
       <h1>Сливочное мороженое</h1>
 
       <section class="catalog-filter">
+        <h2 class="visually-hidden">Фильтр каталога</h2>
         <form action="url">
           <!-- Немного повспоминала инпуты... Хотя скорее всего придется всё переписывать -->
           <ul class="filter-items">
             <li class="filter-item">
-              <label>
-                Сортировка
+                <p>Сортировка</p>
                 <select class="" name="sort-by">
                   <option value="по популярности">по популярности</option>
                   <option value="по цене">по цене</option>
                 </select>
-              </label>
+
             </li>
             <li class="filter-item">
-              <label>
-                Цена 100 руб. - 500 руб.
-                <!-- <input type="range" min="100" max="500" step="5" multiple>  -->
-              </label>
+              <p>Цена 100 руб. - 500 руб.</p>
+              <!-- <label>
+                <input type="range" min="100" max="500" step="5" multiple>
+              </label> -->
             </li>
             <li class="filter-item">
-              <label>
-                Жирность
-                <input type="radio" name="fat" value="0">0%</input>
-                <input type="radio" name="fat" value="<10">до 10%</input>
-                <input type="radio" name="fat" value="<30">до 30%</input>
-                <input type="radio" name="fat" value=">30">выше 30%</input>
-              </label>
+                <p>Жирность:</p>
+                <label><input type="radio" name="fat" value="0">0%</label>
+                <label><input type="radio" name="fat" value="less than 10">до 10%</label>
+                <label><input type="radio" name="fat" value="less than 30">до 30%</label>
+                <label><input type="radio" name="fat" value="more than 30">выше 30%</label>
             </li>
             <li class="filter-item">
-              <label>
-                Наполнители:
-                <input type="checkbox" name="filler" value="chocolate" checked>шоколадные</input>
-                <input type="checkbox" name="filler" value="shugar" checked>сахарные посыпки</input>
-                <input type="checkbox" name="filler" value="fruit">фрукты</input>
-                <input type="checkbox" name="filler" value="syrup">сиропы</input>
-                <input type="checkbox" name="filler" value="jam">джемы</input>
-              </label>
+                <p>Наполнители:</p>
+                <label><input type="checkbox" name="filler" value="chocolate" checked>шоколадные</label>
+                <label><input type="checkbox" name="filler" value="shugar" checked>сахарные посыпки</label>
+                <label><input type="checkbox" name="filler" value="fruit">фрукты</label>
+                <label><input type="checkbox" name="filler" value="syrup">сиропы</label>
+                <label><input type="checkbox" name="filler" value="jam">джемы</label>
             </li>
           </ul>
-          <input type="submit" name="" value="Применить">
+          <input type="submit" name="filter-parameters" value="Применить">
         </form>
 
       </section>
 
       <section class="catalog-items">
+        <h2 class="visually-hidden">Список товаров</h2>
         <ul class="icecream-list">
           <li class="icecream-item">
             <img src="img" alt="С апельсиновым джемом и цитрусовой стружкой">
@@ -163,7 +160,7 @@
       </div>
 
       <div class="footer-copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" alt="HTML Academy Logo"></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" alt="Логотип HTML Academy"></a>
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy &copy; 2017</a></p>
       </div>
     </footer>
