@@ -30,13 +30,36 @@
 
         <div class="search">
           <a href="#">Поиск</a>
-          <!-- Здесь будет форма поиска -->
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <label for="header-search" class="visually-hidden">Введите запрос</label>
+            <input type="search" name="search" id="header-search" placeholder="Что ищем?">
+          </form>
         </div>
 
         <ul class="user-nav">
           <li class="login-link">
             <a href="#">Вход</a>
-            <!-- Здесь будет форма входа -->
+            <section class="login-popup">
+              <h2 class="visually-hidden">Вход в личный кабинет</h2>
+              <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label for="user-login" class="visually-hidden">Логин</label>
+                  <input type="email" name="email" id="user-login" value="" placeholder="Электронная почта">
+                </p>
+                <p>
+                  <label for="user-password" class="visually-hidden">Пароль</label>
+                  <input type="password" name="password" id="user-password" value="" placeholder="Пароль">
+                </p>
+                <div class="login-form-footer">
+                  <button type="submit" name="button">Войти</button>
+                  <p class="login-options">
+                    <a href="#" class="restore link-dark">Забыли пароль?</a>
+                    <a href="#" class="new-registration link-dark">Новая регистрация</a>
+                  </p>
+                </div>
+              </form>
+            </section>
+
           </li>
         </ul>
 
@@ -61,11 +84,11 @@
           <div class="slider-item">
             <img src="img/slider/double-1.png" alt="Дайте два!">
             <p>Крем-брюле и пломбир с малиновым джемом</p>
-            <a href="#" class="button">Давайте оба!</a>
+            <a href="#" class="button slider-button">Давайте оба!</a>
           </div>
         </figure>
         <div class="slider-controls">
-          <span class="slider-control"></span>
+          <button type="button" class="slider-control"></button>
         </div>
       </section>
 
@@ -75,24 +98,28 @@
           <li class="offer-item">
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a class="button" href="#">Хочу варенье!</a>
+            <a class="button special-offer-button" href="#">Хочу варенье!</a>
           </li>
           <li class="offer-item">
             <h3>Шоколадки даром!</h3>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <a class="button" href="#">Хочу шоколадки!</a>
+            <a class="button special-offer-button" href="#">Хочу шоколадки!</a>
           </li>
         </ul>
       </section>
 
       <section class="hits">
         <h2 class="visually-hidden">Популярные товары</h2>
-        <ul class="icecream-list">
-          <li class="icecream-item">
-            <img src="img/icecream/orange.jpg" alt="С апельсиновым джемом и цитрусовой стружкой">
-            <p class="price">310 &#8381; <span>/кг</span></p>
-            <a class="icecream-name" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            <a class="button" href="#">Быстрый просмотр</a>
+        <ul class="catalog-items-list">
+          <li class="catalog-item">
+            <a href="catalog-item.html">
+              <p class="catalog-item-img">
+                <img src="img/icecream/orange.jpg" alt="С апельсиновым джемом и цитрусовой стружкой">
+              </p>
+              <p class="catalog-item-price">310 &#8381; <span>/кг</span></p>
+              <h3 class="catalog-item-title link-light">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+            </a>
+            <a class="button catalog-item-button" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -115,25 +142,34 @@
         <h3><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h3>
       </article>
 
-      <section class="subscribtion">
+      <section class="subscribe">
         <h2>Подписка на рассылку</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-        <!-- Здесь будет форма подписки -->
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+          <label for="subscribe-email">Электронная почта</label>
+          <input type="email" name="email" id="subscribe-email" value="" placeholder="Электронная почта">
+          <button type="submit" name="button">Отправить</button>
+        </form>
       </section>
 
       <section class="contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
-        <p>
-          Адрес главного офиса и онлайн-магазина
-          <b>ул. Большая конюшенная 19/8, г. Санкт-Петербург</b>
-        </p>
-        <p>
-          Для заказов по телефону
-          <b><a href="tel:88124502525">8 812 450-25-25</a></b>
-          (с 10 до 22 ежедневно)
-        </p>
-        <a href="#" class="button">Форма обратной связи</a>
-        <!-- Здесь будет карта -->
+        <div class="info">
+          <p>
+            Адрес главного офиса и онлайн-магазина:<br>
+            <b>ул. Большая конюшенная 19/8, г. Санкт-Петербург</b>
+          </p>
+          <p>
+            Для заказов по телефону<br>
+            <b><a href="tel:88124502525">8 812 450-25-25</a></b><br>
+            (с 10 до 22 ежедневно)
+          </p>
+          <a href="#" class="button feedback-button">Форма обратной связи</a>
+        </div>
+        <div class="map">
+          <img src="img/map.jpg" alt="Офис и оффлайн-магазин по адресу ул. Большая конюшенная 19/8, г. Санкт-Петербург">
+          <!-- Здесь будет карта... или не здесь-->
+        </div>
       </section>
 
     </main>
@@ -158,18 +194,33 @@
       </div>
 
       <div class="footer-copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy"></a>
-        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy &copy; 2017</a></p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на сайт HTML Академии">
+          <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
+        </a>
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на сайт HTML Академии">HTML Academy &copy; 2017</a></p>
       </div>
     </footer>
 
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим!</p>
-      <!-- Здесь будет форма -->
-      <button class="modal-close">x</button>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="feedback-name" class="visually-hidden">Имя</label>
+          <input type="text" name="name" id="feedback-name" value="" placeholder="Как вас зовут?">
+        </p>
+        <p>
+          <label for="feedback-email" class="visually-hidden">Электронная почта</label>
+          <input type="text" name="email" id="feedback-email" value="" placeholder="Ваша почта для ответа?">
+        </p>
+        <p>
+          <label for="feedback-text" class="visually-hidden">Текст обращения</label>
+          <textarea name="text" id="feedback-text" placeholder="Напишите что-нибудь..." rows="5"></textarea>
+        </p>
+        <button type="submit" class="button">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть форму</button>
     </section>
-
 
   </body>
 </html>
