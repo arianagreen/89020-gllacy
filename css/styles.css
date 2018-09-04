@@ -1410,11 +1410,14 @@ h1 {
   resize: none;
 }
 
-
 .modal-feedback {
-  position: relative;
-  /* position: absolute; */
-  width: 477px;
+  display: none;
+  box-sizing: border-box;
+  position: fixed;
+  top: 340px;
+  left: 50%;
+  margin-left: -239px;
+  width: 478px;
   padding: 18px 25px;
   border-radius: 9px;
 }
@@ -1458,19 +1461,31 @@ h1 {
   cursor: pointer;
   background: transparent;
   border: none;
+  /* background-color: skyblue; */
 }
 
-.modal-close::before {
+.modal-close::before,
+.modal-close::after {
   position: absolute;
   content: "";
-  width: 17px;
-  height: 17px;
-  left: 0;
-  top: 0;
-  background-image: url("../img/icons/x-big.svg");
+  width: 22px;
+  height: 2px;
+
+  left: -3px;
+  top: 7px;
+
+  background-color: #231f20;
   transition: opacity .2s;
 }
 
-.modal-close:hover::before {
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close:hover {
   opacity: .7;
 }
