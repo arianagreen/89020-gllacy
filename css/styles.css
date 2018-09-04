@@ -389,6 +389,26 @@ textarea */
   background-color: #f8f7f4;
 }
 
+.filled .if-empty {
+  display: none;
+}
+
+.filled. .if-filled {
+  display: block;
+}
+
+.empty .if-empty {
+  display: block;
+}
+
+.empty .if-filled {
+  display: none;
+}
+
+.filled:hover polygon {
+  fill: #E84D37;
+}
+
 .search .user-nav-link {
   display: flex;
   align-items: center;
@@ -1105,7 +1125,8 @@ h1 {
   display: inline;
 }
 
-.catalog-filters legend {
+.catalog-filters legend,
+.range-legend {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -1138,6 +1159,11 @@ h1 {
   user-select: none;
 }
 
+.select-wrapper {
+  padding-top: 7px;
+  padding-bottom: 8px;
+}
+
 .filler-select {
   background: none;
   border: none;
@@ -1151,12 +1177,13 @@ h1 {
   cursor: pointer;
 }
 
-.filter-fange-field {
+.filter-range-field {
   width: 218px;
 }
 
-.filter-fange-field legend{
-  display: inline-block;
+.filter-range-field .filter-wrapper {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .price-controls {
@@ -1165,6 +1192,7 @@ h1 {
 
 .price-controls input {
    width: 30px;
+   padding: 0;
 
    font-size: 14px;
    line-height: 16px;

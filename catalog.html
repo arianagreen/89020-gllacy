@@ -92,7 +92,7 @@
 
             <li class="header-cart has-inner">
               <a href="#" class="cart-state user-nav-link filled">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg class="if-empty"version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
                   <g>
                     <path fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
@@ -100,6 +100,14 @@
                     <circle fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
                     <circle fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
                   </g>
+                </svg>
+                <svg class="if-filled" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+                  <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
+                  <circle fill="#343434" cx="6.984" cy="18" r="2"/>
+                  <circle fill="#343434" cx="15.984" cy="18" r="2"/>
+                  <path fill="#343434" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+                  	L17.372,13z"/>
                 </svg>
                 2 товара
               </a>
@@ -157,7 +165,7 @@
 
           <fieldset>
             <legend>Сортировка</legend>
-            <p class="filter-wrapper">
+            <p class="filter-wrapper select-wrapper">
               <select class="filler-select" name="sort-by">
                 <option value="по популярности">по популярности</option>
                 <option value="по цене">по возрастанию цены</option>
@@ -167,12 +175,14 @@
             </p>
           </fieldset>
 
-          <fieldset class="filter-fange-field">
-            <legend>Цена:</legend>
-            <div class="price-controls">
-              <label class="min-price"><input type="text" name="min-price" value="100">руб.</label> -
-              <label class="max-price"><input type="text" name="max-price" value="500">руб.</label>
+          <fieldset class="filter-range-field">
+            <div class="range-legend">Цена:
+              <div class="price-controls">
+                <label class="min-price"><input type="text" name="min-price" value="100">руб.</label> &#8211;
+                <label class="max-price"><input type="text" name="max-price" value="500">руб.</label>
+              </div>
             </div>
+
             <div class="filter-wrapper">
               <div class="filter-range">
                 <div class="range-controls">
