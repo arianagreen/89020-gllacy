@@ -478,7 +478,6 @@ textarea */
 }
 
 .special-offers {
-
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 40px;
@@ -492,16 +491,14 @@ textarea */
   padding-left: 0;
 }
 
-
-
 .offer-item {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   width: 560px;
   min-height: 230px;
   border-radius: 12px;
   padding: 20px;
-  padding-bottom: 70px;
   background-repeat: no-repeat;
 }
 
@@ -527,9 +524,8 @@ textarea */
 }
 
 .special-offer-button {
-  position: absolute;
-  right: 20px;
-  bottom: 25px;
+  align-self: flex-end;
+  margin-top: auto;
 }
 
 
@@ -801,15 +797,12 @@ textarea */
 }
 
 .subscribe-form {
-  position: relative;
-  padding-right: 145px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .subscribe-button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding-bottom: 12px;
+  margin-left: 10px;
 }
 
 .subscribe-form input {
@@ -1145,6 +1138,94 @@ h1 {
   user-select: none;
 }
 
+.filler-select {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  transition: color .2s;
+}
+
+.filler-select:hover {
+  color: #323232;
+  cursor: pointer;
+}
+
+.filter-fange-field {
+  width: 218px;
+}
+
+.filter-fange-field legend{
+  display: inline-block;
+}
+
+.price-controls {
+  display: inline-block;
+}
+
+.price-controls input {
+   width: 30px;
+
+   font-size: 14px;
+   line-height: 16px;
+   font-weight: 500;
+   color: inherit;
+
+   background: none;
+   border: none;
+ }
+
+ .filter-range {
+   position: relative;
+   height: 20px;
+   box-sizing: border-box;
+   padding-top: 8px;
+ }
+
+ .range-controls {
+   position: relative;
+
+ }
+
+ .range-controls .scale {
+   position: relative;
+   height: 5px;
+   background-color: rgba(255, 255, 255, .5);
+ }
+
+ .range-controls .bar {
+   position: absolute;
+   left: 23px;
+   right: 55px;
+   height: 5px;
+   /* width: 50%; */
+   background-color: #ffffff;
+ }
+
+ .range-toggle {
+   box-sizing: border-box;
+   content: "";
+   position: absolute;
+   top: -8px;
+   height: 20px;
+   width: 20px;
+   border-radius: 50%;
+   background-color: #ababab;
+   border: 8px solid #ffffff;
+ }
+
+ .range-toggle-min {
+   left: 13px;
+ }
+
+ .range-toggle-max {
+   right: 45px;
+ }
+
+ .range-toggle:hover {
+   cursor: pointer;
+ }
+
 .input-checkbox + label::before,
 .input-radio + label::before,
 .input-radio + label::after {
@@ -1335,12 +1416,13 @@ h1 {
   /* position: absolute; */
   width: 477px;
   padding: 18px 25px;
-  padding-bottom: 70px;
   border-radius: 9px;
-
 }
 
-
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
 
 .modal-feedback p {
   margin-top: 0;
@@ -1356,11 +1438,8 @@ h1 {
 }
 
 .modal-feedback .button {
-  position: absolute;
-  bottom: 18px;
-  right: 25px;
+  align-self: flex-end;
 }
-
 
 .modal-heading {
   margin-top: 0;
