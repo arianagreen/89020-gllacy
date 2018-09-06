@@ -948,7 +948,10 @@ main {
   line-height: 20px;
   color: #323232;
   position: relative;
-  height: 35.3vw;
+  /* height: 35.3vw; */
+  width: 1200px;
+  height: 430px;
+  margin: 0 auto;
 }
 
 .contacts .container {
@@ -987,9 +990,8 @@ main {
 .map img {
   position: absolute;
   width: 100%;
-  /* top: -28%; */
   top: 50%;
-  margin-top: -321px;
+  margin-top: -320px;
 }
 
 
