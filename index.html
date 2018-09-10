@@ -8,6 +8,7 @@
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
+
     <header class="main-header">
 
       <nav class="main-nav">
@@ -19,9 +20,9 @@
           </a>
 
           <ul class="site-nav">
-            <li class="has-inner-list">
+            <li class="has-inner-list has-inner">
               <a href="catalog.html" class="site-nav-link">Каталог</a>
-              <ul class="catalog-inner-nav nav-inner-item">
+              <ul class="sub-menu nav-inner-item">
                 <li  class="new"><a href="#">Новинки</a></li>
                 <li class=""><a href="catalog.html">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
@@ -77,9 +78,9 @@
                     <input class="text-input" type="password" name="password" id="user-password" value="" placeholder="Пароль">
                   </p>
                   <div class="login-form-footer">
-                    <button type="submit" class="button">Войти</button>
+                    <button type="submit" class="button login-button">Войти</button>
                     <p class="login-options">
-                      <a href="#" class="restore link-dark">Забыли пароль?</a>
+                      <a href="#" class="restore link-dark">Забыли пароль?</a><br>
                       <a href="#" class="new-registration link-dark">Новая регистрация</a>
                     </p>
                   </div>
@@ -87,7 +88,7 @@
               </section>
             </li>
 
-            <li class="header-cart">
+            <li class="header-cart has-inner">
               <a href="#" class="cart-state user-nav-link empty">
                 <svg class="if-empty" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 	 width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
@@ -128,17 +129,38 @@
         <h2 class="visually-hidden">Фотогалерея</h2>
         <div class="slider-wrapper">
           <ul class="slider-list">
+
             <li class="slider-item slide" id="slide1">
               <div class="slide-content">
                 <div class="slider-img-wrapper">
-                  <img class="slider-img" src="img/slider/double-1.png" alt="Дайте два!">
+                  <img class="slider-img" src="img/slider/double-1.png" alt="Дайте два!" width="647" hieght="584">
                 </div>
-
                 <div class="slide-info">
                   <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
                   <a href="#" class="button slide-button">Давайте оба!</a>
                 </div>
-
+              </div>
+            </li>
+            <li class="slider-item" id="slide2">
+              <div class="slide-content">
+                <div class="slider-img-wrapper">
+                  <img class="slider-img" src="img/slider/double-2.png" alt="Дайте два!" width="644" hieght="582">
+                </div>
+                <div class="slide-info">
+                  <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
+                  <a href="#" class="button slide-button">Давайте оба!</a>
+                </div>
+              </div>
+            </li>
+            <li class="slider-item" id="slide3">
+              <div class="slide-content">
+                <div class="slider-img-wrapper">
+                  <img class="slider-img" src="img/slider/double-3.png" alt="Дайте два!" width="639" hieght="582">
+                </div>
+                <div class="slide-info">
+                  <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
+                  <a href="#" class="button slide-button">Давайте оба!</a>
+                </div>
               </div>
             </li>
           </ul>
@@ -157,7 +179,7 @@
 
     <main>
 
-      <div class="container">
+      <div class="container index-container">
         <h1 class="visually-hidden">Магазин мороженного Gllacy</h1>
 
 
@@ -195,7 +217,7 @@
             <li class="catalog-item">
               <a href="catalog-item.html" class="visible-part">
                 <p class="img-wrapper">
-                  <img class="catalog-item-img" src="img/icecream/orange.jpg" alt="С апельсиновым джемом и цитрусовой стружкой">
+                  <img class="catalog-item-img" src="img/icecream/orange.jpg" alt="С апельсиновым джемом и цитрусовой стружкой" width="267" hieght="267">
                 </p>
                 <div class="catalog-item-description">
                   <p class="catalog-item-price">310<span class="currency">&#8381;</span> <span class="weight">/кг</span></p>
@@ -212,7 +234,7 @@
             <li class="catalog-item">
               <a href="catalog-item.html" class="visible-part">
                 <p class="img-wrapper">
-                  <img class="catalog-item-img" src="img/icecream/coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада">
+                  <img class="catalog-item-img" src="img/icecream/coffee.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" hieght="267">
                 </p>
                 <div class="catalog-item-description">
                   <p class="catalog-item-price">380<span class="currency">&#8381;</span> <span class="weight">/кг</span></p>
@@ -228,7 +250,7 @@
             <li class="catalog-item">
               <a href="catalog-item.html" class="visible-part">
                 <p class="img-wrapper">
-                  <img class="catalog-item-img" src="img/icecream/strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                  <img class="catalog-item-img" src="img/icecream/strawberry.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" hieght="267">
                 </p>
                 <div class="catalog-item-description">
                   <p class="catalog-item-price">355<span class="currency">&#8381;</span> <span class="weight">/кг</span></p>
@@ -244,7 +266,7 @@
             <li class="catalog-item">
               <a href="catalog-item.html" class="visible-part">
                 <p class="img-wrapper">
-                  <img class="catalog-item-img" src="img/icecream/cremebrulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
+                  <img class="catalog-item-img" src="img/icecream/cremebrulee.jpg" alt="Сливочное крем-брюле с карамельной подливкой" width="267" hieght="267">
                 </p>
                 <div class="catalog-item-description">
                   <p class="catalog-item-price">415<span class="currency">&#8381;</span> <span class="weight">/кг</span></p>
@@ -313,7 +335,7 @@
         </div>
 
         <div class="map">
-          <img src="img/map.jpg" alt="Офис и оффлайн-магазин по адресу ул. Большая конюшенная 19/8, г. Санкт-Петербург">
+          <img src="img/map.jpg" alt="Офис и оффлайн-магазин по адресу ул. Большая конюшенная 19/8, г. Санкт-Петербург" width="1200" hieght="640">
           <!-- Здесь будет карта... или не здесь-->
         </div>
       </section>
