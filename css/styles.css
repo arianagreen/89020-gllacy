@@ -59,8 +59,8 @@ input[type="radio"].visually-hidden {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   border: none;
   cursor: pointer;
-  padding: 11px 22px;
-  padding-bottom: 12px;
+  padding: 10px 22px;
+  padding-bottom: 11px;
   border-radius: 23px;
   -webkit-transition: background .2s;
   -o-transition: background .2s;
@@ -140,6 +140,8 @@ textarea */
   padding: 10px 14px;
   font: inherit;
   font-weight: bold;
+  line-height: 24px;
+
   background-color: #ffffff;
   border: 1px solid #b2b2b2;
   border-radius: 5px;
@@ -233,7 +235,11 @@ textarea */
 
 .site-nav>li {
   margin-right: 27px;
+  min-height: 37px;
+  padding-top: 10px;
   /* margin-bottom: 10px; */
+  /* padding-top: 5px;
+  padding-bottom: 5px; */
 }
 
 .user-nav {
@@ -244,6 +250,13 @@ textarea */
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-left: auto;
+}
+
+.user-nav>li {
+  min-height: 37px;
+  padding-top: 10px;
+  /* padding-top: 5px;
+  padding-bottom: 5px; */
 }
 
 .has-inner {
@@ -331,7 +344,7 @@ textarea */
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  top: 32px;
+  top: 42px;
   background-color: #f8f7f4;
   color: #323232;
   -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -417,11 +430,13 @@ textarea */
 .user-nav-link {
   position: relative;
   background-color: rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  line-height: 16px;
   font-weight: 500;
   color: #ffffff;
   border-radius: 15px;
-  padding: 7px 11px;
-  padding-top: 6px;
+  padding: 8px 16px;
+  padding-top: 7px;
   padding-left: 45px;
   -webkit-transition: color .2s, background .2s;
   -o-transition: color .2s, background .2s;
@@ -481,6 +496,10 @@ textarea */
 
 .filled:hover polygon {
   fill: #E84D37;
+}
+
+li.search {
+  padding-top: 2px;
 }
 
 .search .user-nav-link {
@@ -825,6 +844,7 @@ textarea */
 
 .offer-item p {
   margin-top: 0;
+  letter-spacing: 0.1px;
 }
 
 .special-offer-button {
@@ -855,7 +875,7 @@ textarea */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 267px;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   margin-right: 26px;
   text-align: center;
 }
@@ -938,14 +958,12 @@ textarea */
   display: inline-block;
   font-size: 43px;
   margin-left: 3px;
-  vertical-align: top;
 }
 
 .catalog-item-price .weight {
   display: inline-block;
   margin-left: -10px;
   font-size: 30px;
-  vertical-align: top;
 }
 
 .catalog-item-title {
@@ -1111,7 +1129,7 @@ textarea */
 .subscribe .background {
   background: #f8f7f4;
   border-radius: 9px;
-  padding: 30px 20px 35px;
+  padding: 28px 20px 35px;
 }
 
 .subscribe p {
@@ -1232,7 +1250,7 @@ textarea */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 24px;
+  padding-top: 20px;
   padding-bottom: 15px;
 }
 
@@ -1363,7 +1381,6 @@ textarea */
 
 .footer-copyright p {
   margin: 0;
-  margin-top: -5px;
 }
 
 .modal-feedback .modal-heading {
@@ -1488,20 +1505,26 @@ h1 {
 
 .filter-wrapper {
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 17px;
+  border-radius: 20px;
   line-height: 18px;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 9px 17px;
+  padding: 9px 16px;
 }
+
+
 
 .filter-option {
   padding-left: 32px;
-  margin-right: 20px;
+  margin-right: 14px;
 }
 
 .filter-option:last-child {
   margin-right: 0;
+}
+
+.for-checkbox .filter-option:not(:last-child) {
+  margin-right: 18px;
 }
 
 .filter-option label {
@@ -1520,6 +1543,7 @@ h1 {
 
 .filler-select {
   /* background: none; */
+  position: relative;
   border: none;
   color: inherit;
   font: inherit;
@@ -1530,7 +1554,17 @@ h1 {
   padding-top: 7px;
   padding-bottom: 8px;
   padding-left: 17px;
-  border-radius: 17px;
+  padding-right: 30px;
+  border-radius: 20px;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+
+  background-image: url(../img/icons/select-arrow.png);
+  background-repeat: no-repeat;
+  background-position: top 13px right 14px;
 }
 
 .filler-select:hover,
@@ -1538,6 +1572,7 @@ h1 {
   color: #323232;
   cursor: pointer;
   background-color: #ffffff;
+  background-image: url(../img/icons/select-arrow-hover.png);
   outline: none;
 }
 
@@ -1546,8 +1581,7 @@ h1 {
 }
 
 .filter-range-field .filter-wrapper {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 8px 20px;
 }
 
 .price-controls {
@@ -1580,7 +1614,7 @@ h1 {
 
 .range-controls .scale {
   position: relative;
-  height: 5px;
+  height: 4px;
   background-color: rgba(255, 255, 255, .5);
 }
 
@@ -1588,7 +1622,7 @@ h1 {
   position: absolute;
   left: 23px;
   right: 55px;
-  height: 5px;
+  height: 4px;
   /* width: 50%; */
   background-color: #ffffff;
 }
@@ -1739,6 +1773,7 @@ h1 {
   display: flex;
   list-style: none;
   margin: 0;
+  margin-right: -8px;
   margin-left: auto;
   padding-left: 0;
 }
