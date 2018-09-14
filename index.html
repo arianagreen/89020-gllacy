@@ -7,7 +7,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="green">
 
     <header class="main-header">
 
@@ -130,7 +130,7 @@
         <div class="slider-wrapper">
           <ul class="slider-list">
 
-            <li class="slider-item slide" id="slide1">
+            <li class="slider-item slide green" id="slide1">
               <div class="slide-content">
                 <div class="slider-img-wrapper">
                   <img class="slider-img" src="img/slider/double-1.png" alt="Дайте два!" width="647" hieght="584">
@@ -141,7 +141,7 @@
                 </div>
               </div>
             </li>
-            <li class="slider-item" id="slide2">
+            <li class="slider-item grey" id="slide2">
               <div class="slide-content">
                 <div class="slider-img-wrapper">
                   <img class="slider-img" src="img/slider/double-2.png" alt="Дайте два!" width="644" hieght="582">
@@ -152,7 +152,7 @@
                 </div>
               </div>
             </li>
-            <li class="slider-item" id="slide3">
+            <li class="slider-item brown" id="slide3">
               <div class="slide-content">
                 <div class="slider-img-wrapper">
                   <img class="slider-img" src="img/slider/double-3.png" alt="Дайте два!" width="639" hieght="582">
@@ -319,7 +319,9 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
-        <div class="container">
+        <!-- <div class="container"> -->
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533248!2d30.32085871639421!3d59.93871648187619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1536943422927" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
           <div class="contacts-info">
             <p>
               Адрес главного офиса и офлайн-магазина:<br>
@@ -332,10 +334,12 @@
             </p>
             <a href="#" class="button feedback-button">Форма обратной связи</a>
           </div>
-        </div>
+        <!-- </div> -->
 
         <div class="map">
+
           <img src="img/map.jpg" alt="Офис и оффлайн-магазин по адресу ул. Большая конюшенная 19/8, г. Санкт-Петербург" width="1200" hieght="640">
+
           <!-- Здесь будет карта... или не здесь-->
         </div>
       </section>
@@ -443,25 +447,32 @@
     </footer>
 
     <section class="modal modal-feedback">
-      <h2 class="visually-hidden">Форма обратной связи</h2>
-      <p class="modal-heading">Мы обязательно вам ответим!</p>
-      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="feedback-name" class="visually-hidden">Имя</label>
-          <input class="text-input" type="text" name="name" id="feedback-name" value="" placeholder="Как вас зовут?">
-        </p>
-        <p>
-          <label for="feedback-email" class="visually-hidden">Электронная почта</label>
-          <input class="text-input" type="text" name="email" id="feedback-email" value="" placeholder="Ваша почта для ответа?">
-        </p>
-        <p>
-          <label for="feedback-text" class="visually-hidden">Текст обращения</label>
-          <textarea class="text-input feedback-text" name="text" id="feedback-text" placeholder="Напишите что-нибудь..." rows="6"></textarea>
-        </p>
-        <button type="submit" class="button">Отправить</button>
-      </form>
-      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть форму</span></button>
+      <div class="modal-content">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <p class="modal-heading">Мы обязательно вам ответим!</p>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="feedback-name" class="visually-hidden">Имя</label>
+            <input class="text-input" type="text" name="name" id="feedback-name" value="" placeholder="Как вас зовут?" required>
+          </p>
+          <p>
+            <label for="feedback-email" class="visually-hidden">Электронная почта</label>
+            <input class="text-input" type="email" name="email" id="feedback-email" value="" placeholder="Ваша почта для ответа?" required>
+          </p>
+          <p>
+            <label for="feedback-text" class="visually-hidden">Текст обращения</label>
+            <textarea class="text-input feedback-text" name="text" id="feedback-text" placeholder="Напишите что-нибудь..." rows="6"></textarea>
+          </p>
+          <button type="submit" class="button">Отправить</button>
+        </form>
+        <button class="modal-close" type="submit"><span class="visually-hidden">Закрыть форму</span></button>
+      </div>
+
     </section>
+
+    <div class="modal-overlay"></div>
+
+  <script src="js/script.js"></script>
 
   </body>
 </html>
