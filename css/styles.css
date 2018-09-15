@@ -1204,7 +1204,7 @@ li.search {
           box-sizing: border-box;
   position: absolute;
   left: 50%;
-  margin-left: 273px;
+  /* margin-left: 273px; */
   margin-left: calc(1146px / 2 - 300px);
   width: 300px;
   background-color: #ffffff;
@@ -1581,7 +1581,7 @@ h1 {
       -ms-appearance: none;
           appearance: none;
 
-  background-image: url(../img/icons/select-arrow.png);
+  background-image: url(../img/icons/select-arrow.svg);
   background-repeat: no-repeat;
   background-position: top 13px right 14px;
 }
@@ -1591,7 +1591,7 @@ h1 {
   color: #323232;
   cursor: pointer;
   background-color: #ffffff;
-  background-image: url(../img/icons/select-arrow-hover.png);
+  background-image: url(../img/icons/select-arrow-hover.svg);
   outline: none;
 }
 
@@ -1676,9 +1676,12 @@ h1 {
   content: "";
   position: absolute;
   opacity: .8;
+
   -webkit-transition: opacity .2s, visibility .1s, background-image .2s;
        -o-transition: opacity .2s, visibility .1s, background-image .2s;
           transition: opacity .2s, visibility .1s, background-image .2s;
+
+
 }
 
 .input-radio+label::before {
@@ -1733,13 +1736,13 @@ h1 {
   width: 24px;
   left: -32px;
   top: 0;
-  background-image: url("../img/icons/checkbox-off.png");
+  background-image: url("../img/icons/checkbox-off.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-size: auto 100%;
 }
 
 .input-checkbox:checked+label::before {
-  background-image: url("../img/icons/checkbox-on.png");
+  background-image: url("../img/icons/checkbox-on.svg");
 }
 
 .filter-button {
@@ -1805,7 +1808,6 @@ h1 {
 
 .pagination-item a {
   position: relative;
-  display: inline-block;
   width: 26px;
   height: 26px;
   display: -webkit-box;
@@ -1848,13 +1850,10 @@ h1 {
 .pagination-item.next a::before {
   position: absolute;
   content: "";
-  height: 14px;
-  width: 9px;
-  background-image: url("../img/icons/arrow-right.png");
-  top: 50%;
-  left: 50%;
-  margin-left: -4.5px;
-  margin-top: -7px;
+  height: 12px;
+  width: 8px;
+  background-image: url("../img/icons/icon-right-small.svg");
+  background-repeat: no-repeat;
 }
 
 .pagination-item.prev a::before {
