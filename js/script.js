@@ -10,7 +10,16 @@ var storageName = localStorage.getItem("name");
 var storageEmail = localStorage.getItem("email");
 
 
-feedbackButton.addEventListener("click", function(evt) {
+var isStorageSupport = true;
+var storage = "";
+
+try {
+  storage = localStorage.getItem("name");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+feedbackButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalFeedback.classList.add("modal-show");
   inputName.focus();
@@ -20,37 +29,52 @@ feedbackButton.addEventListener("click", function(evt) {
     inputEmail.focus();
   }
 
-  if (storageName && storageEmail) {
+  if (storageEmail) {
     inputEmail.value = storageEmail;
-    textarea.focus();
   }
 
+  if (storageEmail && !storageName) {
+    inputName.focus();
+  }
+
+  if (storageName && storageEmail) {
+    textarea.focus();
+  }
 });
 
-close.addEventListener("click", function(evt) {
+close.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalFeedback.classList.remove("modal-show");
+  modalFeedback.classList.remove("modal-error");
 });
 
-form.addEventListener("submit", function(evt) {
-  if(!inputName.value || !inputEmail.value) {
+form.addEventListener("submit", function (evt) {
+  console.log("submit");
+  if (!inputName.value || !inputEmail.value) {
     evt.preventDefault();
+    console.log("error");
+    modalFeedback.classList.remove("modal-error");
+    modalFeedback.offsetWidth = modalFeedback.offsetWidth;
+    modalFeedback.classList.add("modal-error");
   } else {
-    localStorage.setItem("name", inputName.value);
-    localStorage.setItem("email", inputEmail.value);
+    if (isStorageSupport) {
+      localStorage.setItem("name", inputName.value);
+      localStorage.setItem("email", inputEmail.value);
+    }
   };
 });
 
-window.addEventListener("keydown", function(evt) {
+window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (modalFeedback.classList.contains("modal-show")){
       evt.preventDefault(evt);
       modalFeedback.classList.remove("modal-show");
+      modalFeedback.classList.remove("modal-error");
     }
   }
 });
 
-overlay.addEventListener("click", function(evt) {
+overlay.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalFeedback.classList.remove("modal-show");
 })
@@ -68,12 +92,11 @@ var currentSlide = slider.querySelector(".slide");
 var background = ["green", "grey", "brown"];
 
 
-controls.forEach(function(item, i, array) {
-  item.addEventListener("click", function(evt) {
+controls.forEach(function (item, i, array) {
+  item.addEventListener("click", function (evt) {
     evt.preventDefault();
     var control = item;
     var relatedSlide = slides[i];
-    console.log(relatedSlide);
 
     if (!control.classList.contains("current")) {
       currentControl.classList.remove("current");
@@ -88,4 +111,4 @@ controls.forEach(function(item, i, array) {
       body.classList.add(background[i]);
     }
   })
-})
+});
