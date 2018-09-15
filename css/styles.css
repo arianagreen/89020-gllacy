@@ -1795,7 +1795,7 @@ h1 {
 
 .pagination-item {
   display: inline-block;
-  margin-right: 4px;
+  margin-right: 3px;
   vertical-align: top;
 }
 
@@ -1808,7 +1808,6 @@ h1 {
   display: inline-block;
   width: 26px;
   height: 26px;
-  /* line-height: 25px; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1835,6 +1834,14 @@ h1 {
   background-color: rgba(255, 255, 255, 1);
   color: #323232;
   cursor: default;
+}
+
+.pagination-item.prev {
+  margin-right: 7px;
+}
+
+.pagination-item.next {
+  margin-left: 3px;
 }
 
 .pagination-item.prev a::before,
@@ -1886,8 +1893,7 @@ h1 {
 @-webkit-keyframes shake {
   0%,
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    margin: 0;
   }
 
   10%,
@@ -1895,25 +1901,21 @@ h1 {
   50%,
   70%,
   90% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    margin-left: -10px;
   }
 
   20%,
   40%,
   60%,
   80% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    margin-left: 10px;
   }
 }
-
 
 @keyframes shake {
   0%,
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    margin: 0;
   }
 
   10%,
@@ -1921,16 +1923,14 @@ h1 {
   50%,
   70%,
   90% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    margin-left: -10px;
   }
 
   20%,
   40%,
   60%,
   80% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    margin-left: 10px;
   }
 }
 
