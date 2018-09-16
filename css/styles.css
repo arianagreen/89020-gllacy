@@ -46,7 +46,8 @@ svg circle {
           transition: fill .2s;
 }
 
-.visually-hidden:not(:focus):not(:active),
+/* .visually-hidden:not(:focus):not(:active), */
+.visually-hidden,
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
@@ -478,12 +479,11 @@ textarea */
   fill: #323232;
 }
 
-.user-nav-link:hover,
-.user-nav-link.filled,
 .has-inner:hover .user-nav-link,
 .has-inner:focus .user-nav-link,
 .has-inner:hover .site-nav-link::before,
-.has-inner:focus .site-nav-link::before {
+.has-inner:focus .site-nav-link::before,
+.filled .user-nav-link {
   color: #323232;
   background-color: #f8f7f4;
 }
@@ -510,6 +510,11 @@ textarea */
 
 .filled:hover polygon {
   fill: #E84D37;
+}
+
+.filled:hover circle,
+.filled:hover path {
+  fill: #343434;
 }
 
 li.search {
@@ -567,6 +572,10 @@ li.search {
 .login-options {
   margin: 0;
   font-size: 13px;
+}
+
+.login-options p{
+  margin: 0;
 }
 
 .login-button {
@@ -1171,12 +1180,12 @@ li.search {
 }
 
 .contacts {
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
+          align-items: center; */
   font-size: 14px;
   line-height: 20px;
   color: #323232;
@@ -1203,10 +1212,13 @@ li.search {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
+  top: 50%;
   left: 50%;
   /* margin-left: 273px; */
   margin-left: calc(1146px / 2 - 300px);
   width: 300px;
+  min-height: 305px;
+  transform: translateY(-50%);
   background-color: #ffffff;
   color: #323232;
   padding: 30px 25px;
@@ -1214,41 +1226,52 @@ li.search {
 }
 
 .contacts-info p {
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.contacts-info p:last-of-type {
-  margin-bottom: 25px;
+  margin: 0;
 }
 
 .contacts-info b {
+  display: block;
   font-size: 18px;
   line-height: 24px;
 }
 
 .contacts-info .tel {
+  padding: 2px 0;
   color: #323232;
+}
+
+.contacts-info .address {
+  margin-bottom: 20px;
+}
+
+.address span {
+  display: inline-block;
+  padding-right: 92px;
 }
 
 .feedback-button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+  margin-top: 25px;
 }
 
 .contacts iframe {
+  position: absolute;
   width: 100%;
   height: 100%;
   border: none;
 }
 
 .contacts .map {
-  position: absolute;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 0; */
   z-index: -1;
   overflow: hidden;
 }
@@ -1274,8 +1297,8 @@ li.search {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 20px;
-  padding-bottom: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .main-footer ul {
@@ -1287,6 +1310,7 @@ li.search {
 
 .footer-social {
   max-width: 267px;
+  margin-right: 5px;
 }
 
 .footer-social li {
@@ -1372,7 +1396,7 @@ li.search {
 }
 
 .footer-info li {
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 .special-info {
@@ -1384,7 +1408,7 @@ li.search {
   position: absolute;
   left: -22px;
   top: 50%;
-  margin-top: -7px;
+  margin-top: -5px;
 }
 
 .special-info:hover path,
@@ -1401,12 +1425,34 @@ li.search {
   display: inline-block;
   line-height: 0;
   vertical-align: top;
+  margin-top: -8px;
 }
 
 .footer-copyright p {
   margin: 0;
 }
 
+
+.catalog-page+.main-footer {
+  position: relative;
+  margin-top: 30px;
+}
+
+.catalog-page+.main-footer .container {
+  padding-top: 28px;
+  padding-bottom: 30px;
+}
+
+.catalog-page+.main-footer::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 1146px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, .3);
+}
 
 /* Catalog */
 .cart-preview {
@@ -1584,6 +1630,11 @@ h1 {
   background-image: url(../img/icons/select-arrow.svg);
   background-repeat: no-repeat;
   background-position: top 13px right 14px;
+}
+
+
+select::-ms-expand { /* for IE */
+    display: none;
 }
 
 .filler-select:hover,
@@ -1783,6 +1834,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 4px; /* исключительно для попадания в макет */
 }
 
 .pagination-list {
@@ -1848,7 +1900,6 @@ h1 {
 
 .pagination-item.prev a::before,
 .pagination-item.next a::before {
-  position: absolute;
   content: "";
   height: 12px;
   width: 8px;
@@ -1871,19 +1922,7 @@ h1 {
   cursor: default;
 }
 
-.catalog-page+.main-footer {
-  margin-top: 30px;
-}
 
-.catalog-page+.main-footer .container::before {
-  content: "";
-  position: absolute;
-  height: 1px;
-  top: 0;
-  left: 25px;
-  right: 25px;
-  background-color: rgba(255, 255, 255, .3);
-}
 
 
 /* Modal */
